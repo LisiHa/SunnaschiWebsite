@@ -1,0 +1,213 @@
+
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+box-sizing:border-box;  
+}
+/*general nav bar styles*/
+.nav-bar{
+    background-color: rgb(245, 245, 245);
+    height: 10vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:2vh;
+    color: rgb(168, 168, 168);
+}
+
+.logo{
+    font-size: 2.5vh;
+    color:rgb(245, 199, 157);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*top navigation bar styles*/
+@media screen and (min-width: 600px){
+
+    .nav-bar{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 5vw;
+        padding-left: 5vw;
+    }
+   
+    .menu-icon{
+        display: none;
+    }
+
+    .nav-bar a:hover {
+        color: gray;
+    }
+
+    .nav-bar a.active{
+        color: gray;
+    }
+}
+
+/*mobile nav bar*/
+@media screen and (max-width: 600px){
+   
+    .nav-bar a:not(:first-child){
+        display:none;
+    }
+    .nav-bar a.icon{
+        float: right;
+        padding-right: 5vw;
+    }
+    .nav-bar > .icon > div{
+        width: 5vw;
+        height: 0.3vw;
+        background-color: gray;
+        margin: 2vw 0;
+    }
+    .nav-bar > .logo{
+       display: none;
+    }
+} 
+  
+/*content styles mobile*/
+    .content-wrapper{
+        display: grid;
+        
+        font-size: 2vh;
+        color: lightgray;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-transform: uppercase;
+    }
+    .header{
+        background-image: url(images/20201216_090700.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 20vh;
+        text-align: center;
+        font-size: 3vh;
+        color:lightgrey;
+        border-color:white;
+        border-style: solid;
+        border-width: 0.5;
+        border-bottom-width: 0vh;
+    }
+    .ueber-uns{
+        background-image: url(images/IMG-20201215-WA0018.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+        text-align: center;
+        padding-top: 25vh;
+        border-style: solid;
+        border-width: 0.5vh;
+        border-bottom-width: 6vh;
+        border-color:white;
+        font-style: italic;
+        text-transform: none;
+        color:rgb(119, 118, 117);
+    }
+     
+    
+    .video{
+        height: 20vh;
+        background-image: url(images/gitarregelb.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 15vh;;
+    }
+    .video a{
+        color:lightgray;
+        border:lightgray;
+        border-style: solid;
+        border-width: 0.3vw;
+        margin-top: 10vh;
+        margin-left: 10vw;
+
+    }
+    .aufnahmen{
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        height: 20vh;
+        background-image: url(images/berge.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-style:italic;
+        text-transform: none;
+        
+        
+    }
+    #audio_with_controls{
+        margin-top: 10vh;
+        height: 3vh;
+        border-radius: 0;
+        
+    }
+
+.footer{
+    height:10vh;
+}
+/*Content styles mobile*/
+@media screen and (max-width: 600px){
+    
+    .content-wrapper{
+        grid-template-columns:1fr;
+    }
+    
+}
+/*Content styles Desktop*/
+@media screen and (min-width: 600px){
+    .content-wrapper{
+        grid-template-columns:[start-grid] 1fr [main-start] 2fr [main -end] 1fr [end-grid];
+    }
+    .header{
+        grid-column-start: start-grid;
+        grid-column-end: end-grid;
+        height: 50vh;
+    }
+    .ueber-uns{
+        grid-column-start: start-grid;
+        grid-column-end: main-start;
+        ;
+
+    }
+    .video{
+        grid-column-start: main-start;
+        grid-column-end: end-grid;
+        height: 30vh;
+        padding-top: 25vh;
+    }
+    .aufnahmen{
+        height: 40vh;
+        grid-column-start: start-grid;
+        grid-column-end: end-grid;
+        padding-left: 10vh;
+    }
+
+
+}
+
+
+
+
+/*video-styles*/
+.container-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+  padding-top: 10vh;
+}
+.container-video> .space{
+    height: 10vh;
+}
+
+
+

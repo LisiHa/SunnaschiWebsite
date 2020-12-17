@@ -1,0 +1,21 @@
+.container{
+    height: 99vmax;
+    background-color:lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.container a{
+    height: 10vh;
+    background-color:gray;
+    color: lightgrey;
+    padding-top: 5vh;
+    text-decoration: none;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: 0.1vw;
+}

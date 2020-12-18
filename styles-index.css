@@ -6,6 +6,16 @@ margin: 0;
 text-decoration: none;
 box-sizing:border-box;  
 }
+
+@font-face {
+    font-family: 'amatic_scregular';
+    src: url('fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('fonts/amaticsc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*general nav bar styles*/
 .nav-bar{
     background-color: rgb(245, 245, 245);
@@ -17,15 +27,15 @@ box-sizing:border-box;
 .nav-bar a {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:2vh;
+    font-family: 'amatic_scregular', 'Arial';
+    font-size:3vh;
     color: rgb(168, 168, 168);
 }
 
 .logo{
-    font-size: 2.5vh;
+    font-size: 3vh;
     color:rgb(245, 199, 157);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'amatic_scregular', 'Arial';
 }
 /*top navigation bar styles*/
 @media screen and (min-width: 600px){
@@ -75,20 +85,23 @@ box-sizing:border-box;
 /*content styles mobile*/
     .content-wrapper{
         display: grid;
-        
-        font-size: 2vh;
+        font-size: 3vh;
         color: lightgray;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'amatic_scregular', 'Arial';
         text-transform: uppercase;
     }
     .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         background-image: url(images/20201216_090700.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 20vh;
         text-align: center;
-        font-size: 3vh;
+        margin-top: 6.5vh;
+        font-size: 4vh;
         color:lightgrey;
         border-color:white;
         border-style: solid;
@@ -96,7 +109,7 @@ box-sizing:border-box;
         border-bottom-width: 0vh;
     }
     .ueber-uns{
-        background-image: url(images/IMG-20201215-WA0018.jpg);
+        background-image: url(images/SunnaschiSw.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -105,11 +118,12 @@ box-sizing:border-box;
         padding-top: 25vh;
         border-style: solid;
         border-width: 0.5vh;
-        border-bottom-width: 6vh;
         border-color:white;
-        font-style: italic;
         text-transform: none;
         color:rgb(119, 118, 117);
+    }
+    .ueber-uns p{
+        color: white;
     }
      
     
@@ -132,20 +146,20 @@ box-sizing:border-box;
     }
     .aufnahmen{
         display:flex;
-        flex-direction: column;
-        justify-content:space-evenly;
+        flex-direction: row;
+        justify-content:space-around;
         height: 20vh;
         background-image: url(images/berge.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        font-style:italic;
         text-transform: none;
+        padding-top: 15vh;
         
         
     }
     #audio_with_controls{
-        margin-top: 10vh;
+        
         height: 3vh;
         border-radius: 0;
         
@@ -170,25 +184,26 @@ box-sizing:border-box;
     .header{
         grid-column-start: start-grid;
         grid-column-end: end-grid;
-        height: 50vh;
+        height: 30vh;
     }
-    .ueber-uns{
+ 
+    .video{
         grid-column-start: start-grid;
         grid-column-end: main-start;
-        ;
-
-    }
-    .video{
-        grid-column-start: main-start;
-        grid-column-end: end-grid;
-        height: 30vh;
+        height: 20vh;
         padding-top: 25vh;
     }
+    .ueber-uns{
+        grid-column-start: main-start;
+        grid-column-end: end-grid;
+        height: 20vh;
+    }
     .aufnahmen{
-        height: 40vh;
+        height: 10vh;
         grid-column-start: start-grid;
         grid-column-end: end-grid;
         padding-left: 10vh;
+        padding-top: 5vh;
     }
 
 
